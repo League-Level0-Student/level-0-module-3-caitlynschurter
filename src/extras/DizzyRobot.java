@@ -3,16 +3,21 @@
 
 package extras;
 
+import javax.swing.JOptionPane;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class DizzyRobot {
 	static Robot robot = new Robot();
 	public static void main(String[] args) {
-		
+		robot.sparkle();
+		robot.setSpeed(50);
 		 // 2. Ask the user how dizzy you want the robot from 1-10, then spin that number of times.
-
+		String dizzy = JOptionPane.showInputDialog("How many spins would you like your robot to do?");
+		int spins = Integer.parseInt(dizzy);
+		
  // 1. Use the dance method to make the robot spin.
-	
+		dance(spins);
 
 	}
 
